@@ -43,7 +43,18 @@ function BotCollection({ addToArmy }) {
           <div
             className={`bot-container ${bot_class}`}
             key={id}
-            onClick={() => handleAddToArmy({ id, name, health, damage, armor, bot_class, catchphrase, avatar_url })}
+            onClick={() =>
+              handleAddToArmy({
+                id,
+                name,
+                health,
+                damage,
+                armor,
+                bot_class,
+                catchphrase,
+                avatar_url,
+              })
+            }
           >
             <div className="img-div">
               <img src={avatar_url} alt={name} width="100" height="100" />
@@ -51,9 +62,15 @@ function BotCollection({ addToArmy }) {
             <p className="bot-name">{name}</p>
             <p>{catchphrase}</p>
             <div className="bot-container-footer">
-              <div>{health}</div>
-              <div>{damage}</div>
-              <div>{armor}</div>
+              <div>
+                <i className="fas fa-heart"></i> {health}
+              </div>
+              <div>
+              <i className="fas fa-bolt" style={{ color: "#ef1515" }}></i> {damage}
+              </div>
+              <div>
+                <i className="fas fa-shield-alt"></i> {armor}
+              </div>
             </div>
           </div>
         )
