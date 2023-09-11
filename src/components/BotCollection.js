@@ -19,7 +19,7 @@ function BotCollection({ addToArmy }) {
       }
     };
 
-    getAllBots("http://localhost:8002/bots");
+    getAllBots("https://api.npoint.io/85983421f6deb5636d65/bots/");
   }, []);
 
   const handleAddToArmy = (bot) => {
